@@ -49,6 +49,16 @@ There is no honest “works on every Android version” guarantee. An officially
 
 Read the [safety and scope notes](docs/SAFETY.md) before modifying a device.
 
+## Landing page
+
+A responsive, dependency-free product site is included in [`site/`](site/). Preview it locally with:
+
+```sh
+python3 -m http.server 4173 --directory site
+```
+
+The page documents the app's capabilities, safety boundaries, supported route categories, onboarding flow, installation directions, privacy model, and frequently asked questions.
+
 ## Build
 
 Requirements: a full **JDK 17+**, Android **platform 36**, and **build-tools 36.1.0**. Python 3.10+ is needed for the direct build script. The JVM regression tests use a POSIX shell (`/bin/sh`).

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Trill Root is a private, offline Android root-readiness assistant that explains supported routes without exploits or silent changes.">
+  <title>Trill Root — Know your device before you change it</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="aurora aurora-a" aria-hidden="true"></div>
+  <div class="aurora aurora-b" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Trill Root home">
+      <svg class="brand-mark" viewBox="0 0 108 108" role="img" aria-label="Trill Root shield logo">
+        <path fill="#071217" d="M54 10 90 25l-4 35q-4 24-32 40Q26 84 22 60l-4-35Z"/>
+        <path fill="none" stroke="#00f5ff" stroke-width="3" d="M54 15 84 28l-3 30q-3 20-27 34Q30 78 27 58l-3-30Z"/>
+        <path fill="none" stroke="#ff2bd6" stroke-width="2" d="M54 21 78 31l-2 25q-3 16-22 28Q35 72 32 56l-2-25Z"/>
+        <path fill="#70ff00" d="M37 34h34v9H59v30H49V43H37Z"/>
+        <path fill="#9d72ff" d="M42 50h5v5h-5zm19 0h5v5h-5zM42 61h5v5h-5zm19 0h5v5h-5z"/>
+      </svg>
+      <span>Trill <b>Root</b></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+      <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation" data-nav>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#routes">Routes</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="https://github.com/TrillAI/TrillRoot">View source <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> Android root-readiness, without the guesswork</div>
+        <h1>Know your device.<br><em>Choose the right route.</em></h1>
+        <p class="hero-lead">Trill Root reads your Android build, interprets bootloader signals, and organizes legitimate rooting options—privately, offline, and without silently changing a thing.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#install">Get the preview <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="#how-it-works">See how it works <span aria-hidden="true">→</span></a>
+        </div>
+        <ul class="trust-row" aria-label="Key facts">
+          <li><i class="status-dot"></i>No permissions</li>
+          <li><i class="status-dot"></i>No network access</li>
+          <li><i class="status-dot"></i>No bundled exploits</li>
+        </ul>
+      </div>
+
+      <div class="phone-stage reveal" aria-label="Preview of the Trill Root app">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="phone">
+          <div class="phone-top"><span></span><b>TRILL ROOT</b><small>OFFLINE</small></div>
+          <div class="phone-screen">
+            <div class="app-kicker">ROOT READINESS / 01</div>
+            <h2>THIS DEVICE</h2>
+            <div class="device-card">
+              <div class="device-head"><span>DETECTED BUILD</span><i>READ-ONLY</i></div>
+              <h3>Pixel 8 Pro</h3>
+              <p>Google · Android 16 · API 36</p>
+              <div class="verdict"><span class="pulse"></span><div><b>A route may be possible</b><small>Verify official unlock eligibility</small></div></div>
+            </div>
+            <div class="signal-list">
+              <div><span>Bootloader</span><b>Unconfirmed</b></div>
+              <div><span>OEM unlock</span><b class="cyan">Reported supported</b></div>
+              <div><span>Verified boot</span><b>Green</b></div>
+              <div><span>Active slot</span><b>A (reported)</b></div>
+            </div>
+            <button type="button" tabindex="-1">COMPARE DOCUMENTED ROUTES</button>
+          </div>
+          <div class="phone-nav"><span class="active">Overview</span><span>Routes</span><span>Checklist</span><span>About</span></div>
+        </div>
+        <div class="float-card float-a"><span>129</span> regression checks</div>
+        <div class="float-card float-b"><span>0</span> Android permissions</div>
+      </div>
+    </section>
+
+    <section class="proof-bar" aria-label="Build information">
+      <div><strong>Android 6.0+</strong><span>Minimum API 23</span></div>
+      <div><strong>Android 16</strong><span>Target API 36</span></div>
+      <div><strong>100% offline</strong><span>No account required</span></div>
+      <div><strong>Open source</strong><span>MIT licensed</span></div>
+    </section>
+
+    <section class="section intro" id="features">
+      <div class="section-heading reveal">
+        <div class="eyebrow"><span></span> Clarity before modification</div>
+        <h2>Built to answer the questions<br><em>that actually matter.</em></h2>
+        <p>Rooting is not determined by Android version alone. Trill Root gathers the signals that can be read safely, explains what they mean, and keeps uncertainty visible.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature feature-large reveal">
+          <div class="feature-number">01</div>
+          <div class="feature-icon icon-scan" aria-hidden="true">⌁</div>
+          <h3>Automatic device snapshot</h3>
+          <p>Reads manufacturer, model, codename, Android/API level, security patch, CPU ABI, build ID, fingerprint, slot, dynamic-partition signal, verified boot, and reported unlock state.</p>
+          <div class="mini-terminal" aria-label="Example detected fields">
+            <div><span>manufacturer</span><b>Google</b></div>
+            <div><span>device</span><b>husky</b></div>
+            <div><span>security_patch</span><b>2026-10-05</b></div>
+          </div>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-number">02</div>
+          <div class="feature-icon" aria-hidden="true">◇</div>
+          <h3>Explainable verdicts</h3>
+          <p>Results are intentionally conservative: existing root confirmed, documented route may be possible, no supported route reported, or unknown.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-number">03</div>
+          <div class="feature-icon magenta" aria-hidden="true">⌘</div>
+          <h3>Optional root check</h3>
+          <p>With your confirmation, runs only <code>su -c id</code>. It stops after 20 seconds and never attempts a fallback elevation method.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-number">04</div>
+          <div class="feature-icon violet" aria-hidden="true">✓</div>
+          <h3>Preparation checklist</h3>
+          <p>Track authorization, backup, eligibility, exact firmware, recovery planning, tools, consequences, and safe relocking practices.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-number">05</div>
+          <div class="feature-icon yellow" aria-hidden="true">↗</div>
+          <h3>Portable readiness report</h3>
+          <p>Export a plain-text summary through Android’s document picker. Nothing leaves the device unless you choose where to save it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section workflow" id="how-it-works">
+      <div class="section-heading reveal">
+        <div class="eyebrow"><span></span> Directions of use</div>
+        <h2>From first launch to<br><em>an informed next step.</em></h2>
+      </div>
+      <div class="timeline">
+        <article class="step reveal"><div class="step-index">01</div><div><h3>Read and accept the safety notice</h3><p>On first launch, review the full Terms of Use. Scroll to the end to enable the agreement checkbox. If you do not own the device or lack authorization, exit the app.</p><span class="step-note">Nothing is scanned before onboarding is complete.</span></div></article>
+        <article class="step reveal"><div class="step-index">02</div><div><h3>Review the permission disclosure</h3><p>Trill Root explains that it needs no runtime permissions. Continue to begin a local inspection of public build fields and a fixed allowlist of system properties.</p></div></article>
+        <article class="step reveal"><div class="step-index">03</div><div><h3>Let the device snapshot finish</h3><p>Ten clear status updates show what is being examined. The app then displays the exact values Android reported—without treating missing data as a positive or negative verdict.</p></div></article>
+        <article class="step reveal"><div class="step-index">04</div><div><h3>Read the readiness verdict</h3><p>Check the explanation beneath the result. “May be possible” still requires exact-model research. “Unknown” means stop and verify; it does not mean “try an exploit.”</p></div></article>
+        <article class="step reveal"><div class="step-index">05</div><div><h3>Optionally check existing root</h3><p>Tap <strong>Check existing root access</strong> only if you want to ask an already-installed root manager for a read-only grant. Denying the request does not trigger another method.</p></div></article>
+        <article class="step reveal"><div class="step-index">06</div><div><h3>Compare routes and prepare</h3><p>Open Routes, choose the relevant documented workflow, read every warning, and complete the preparation checklist. Export a report before seeking model-specific support.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section routes" id="routes">
+      <div class="section-heading reveal">
+        <div class="eyebrow"><span></span> Documented paths</div>
+        <h2>Routes, not<br><em>exploit roulette.</em></h2>
+        <p>Trill Root organizes maintained workflows and their requirements. It does not execute them, download packages, or promise compatibility.</p>
+      </div>
+      <div class="route-tabs reveal" role="tablist" aria-label="Rooting routes">
+        <button role="tab" aria-selected="true" aria-controls="route-panel" data-route="magisk">Magisk</button>
+        <button role="tab" aria-selected="false" aria-controls="route-panel" data-route="samsung">Samsung</button>
+        <button role="tab" aria-selected="false" aria-controls="route-panel" data-route="kernelsu">KernelSU</button>
+        <button role="tab" aria-selected="false" aria-controls="route-panel" data-route="legacy">Legacy</button>
+      </div>
+      <div class="route-panel reveal" id="route-panel" tabindex="0">
+        <div class="route-copy">
+          <span class="route-tag" data-route-tag>DOCUMENTED ROUTE</span>
+          <h3 data-route-title>Magisk image patching</h3>
+          <p data-route-summary>Patch the correct image from the exact installed firmware, then follow the device maker’s supported flashing workflow.</p>
+          <ul data-route-list>
+            <li>Official OEM-unlock eligibility</li>
+            <li>Exact matching stock firmware</li>
+            <li>Computer and Android platform-tools</li>
+            <li>Verified recovery plan and complete backup</li>
+          </ul>
+        </div>
+        <aside class="route-warning"><b>Stop-and-check</b><p data-route-warning>Never use another device’s patched image. Do not guess the target partition from Android version, and never relock with modified images installed.</p></aside>
+      </div>
+    </section>
+
+    <section class="section privacy">
+      <div class="privacy-card reveal">
+        <div class="privacy-copy">
+          <div class="eyebrow"><span></span> Private by architecture</div>
+          <h2>Your device data<br><em>stays on your device.</em></h2>
+          <p>No Internet permission. No analytics SDK. No advertising ID. No account. No background upload. External documentation opens visibly in your browser.</p>
+          <a class="text-link" href="https://github.com/TrillAI/TrillRoot/blob/main/docs/ARCHITECTURE.md">Read the architecture notes <span>↗</span></a>
+        </div>
+        <div class="privacy-grid">
+          <div><span class="privacy-value">NONE</span><small>Network permission</small></div>
+          <div><span class="privacy-value">NONE</span><small>Dangerous permissions</small></div>
+          <div><span class="privacy-value">NONE</span><small>Analytics & ads</small></div>
+          <div><span class="privacy-value">LOCAL</span><small>Checklist storage</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section boundaries">
+      <div class="section-heading reveal">
+        <div class="eyebrow warning"><span></span> Honest boundaries</div>
+        <h2>What Trill Root<br><em>does not do.</em></h2>
+      </div>
+      <div class="boundary-grid reveal">
+        <div><span>×</span><p><b>No universal root promise</b>Modern Android security and vendor policy cannot be solved by trying more old tools.</p></div>
+        <div><span>×</span><p><b>No exploit payloads</b>Towelroot, KingRoot, KingoRoot, Sunshine, and historical chipset chains are not bundled or executed.</p></div>
+        <div><span>×</span><p><b>No lock bypasses</b>No FRP, carrier, network, KnoxGuard, payment, account, or device-management bypass.</p></div>
+        <div><span>×</span><p><b>No silent modification</b>No bootloader unlock, firmware download, image patch, partition flash, AVB change, or SELinux change.</p></div>
+      </div>
+    </section>
+
+    <section class="section install" id="install">
+      <div class="install-card reveal">
+        <div>
+          <div class="eyebrow"><span></span> Preview build 0.2.0</div>
+          <h2>Ready to inspect<br><em>your device?</em></h2>
+          <p>The current build is a debug-signed preview for evaluation and sideloading. Its source and reproducible build instructions are available on GitHub.</p>
+          <div class="install-actions">
+            <a class="button button-primary" href="https://github.com/TrillAI/TrillRoot">Open GitHub repository <span>↗</span></a>
+            <a class="button button-secondary" href="https://github.com/TrillAI/TrillRoot/blob/main/docs/BUILDING.md">Build it yourself <span>↗</span></a>
+          </div>
+        </div>
+        <div class="install-steps">
+          <h3>Sideloading directions</h3>
+          <ol>
+            <li><span>1</span><p><b>Obtain a trusted APK</b>Use a project release or build directly from source. Compare its published SHA-256 checksum.</p></li>
+            <li><span>2</span><p><b>Allow this install source</b>Android may ask you to permit installs from your browser or file manager. Approve only that source.</p></li>
+            <li><span>3</span><p><b>Review and install</b>Confirm the app requests no permissions. Install, then disable “install unknown apps” for that source afterward.</p></li>
+            <li><span>4</span><p><b>Complete onboarding</b>Read the safety notice, confirm authorization, and let the local device inspection finish.</p></li>
+          </ol>
+        </div>
+      </div>
+      <div class="build-note reveal"><span>!</span><p><b>Preview notice:</b> compilation and static verification do not prove compatibility with a particular phone. The current preview has not been validated on a physical-device matrix. Follow the project’s validation checklist before production use.</p></div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-heading reveal"><div class="eyebrow"><span></span> Frequently asked</div><h2>Important answers,<br><em>up front.</em></h2></div>
+      <div class="accordion reveal">
+        <details><summary>Will Trill Root root my phone automatically?<span>+</span></summary><p>No. It is a readiness assistant. It identifies relevant device signals, compares documented routes, and helps you prepare. Root installation and firmware modification happen outside the app using exact-model documentation.</p></details>
+        <details><summary>Can it tell me with certainty whether my phone is rootable?<span>+</span></summary><p>No app can honestly guarantee that from Android build fields alone. Trill Root reports conservative outcomes and explains their evidence. Carrier policy, region, exact model, firmware, rollback protection, and current project support still require verification.</p></details>
+        <details><summary>Why does “unknown” not trigger older exploits?<span>+</span></summary><p>An unknown signal is missing evidence, not a vulnerability. Old one-click chains are often patched, device-specific, unmaintained, or redistributed with unacceptable risk. Trying them indiscriminately can compromise data or prevent boot.</p></details>
+        <details><summary>What does the optional root check do?<span>+</span></summary><p>After an explicit confirmation, it runs the fixed command <code>su -c id</code> with a 20-second limit and bounded output. UID 0 confirms that an existing root manager granted access. Failure does not prove the device is unrooted.</p></details>
+        <details><summary>Does it collect my IMEI, serial number, contacts, or location?<span>+</span></summary><p>No. Those values are outside the collector’s fixed allowlist. The app requests no runtime permissions and has no Internet permission. Exported reports can include a build fingerprint, so review them before sharing.</p></details>
+        <details><summary>Is bootloader unlocking safe?<span>+</span></summary><p>It carries material risk. Unlocking normally erases data and can weaken physical security, affect warranty, break protected apps or updates, and expose permanent vendor flags. Never proceed without matching stock firmware and a tested recovery plan.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><div class="brand"><svg class="brand-mark" viewBox="0 0 108 108" aria-hidden="true"><path fill="#071217" d="M54 10 90 25l-4 35q-4 24-32 40Q26 84 22 60l-4-35Z"/><path fill="none" stroke="#00f5ff" stroke-width="3" d="M54 15 84 28l-3 30q-3 20-27 34Q30 78 27 58l-3-30Z"/><path fill="#70ff00" d="M37 34h34v9H59v30H49V43H37Z"/></svg><span>Trill <b>Root</b></span></div><p>Know your device before you change it.</p></div>
+    <div class="footer-links"><div><b>Project</b><a href="https://github.com/TrillAI/TrillRoot">Source code</a><a href="https://github.com/TrillAI/TrillRoot/blob/main/CHANGELOG.md">Changelog</a><a href="https://github.com/TrillAI/TrillRoot/blob/main/LICENSE">License</a></div><div><b>Documentation</b><a href="https://github.com/TrillAI/TrillRoot/blob/main/docs/SAFETY.md">Safety</a><a href="https://github.com/TrillAI/TrillRoot/blob/main/docs/BUILDING.md">Building</a><a href="https://github.com/TrillAI/TrillRoot/blob/main/docs/DEVICE_VALIDATION.md">Validation</a></div></div>
+    <div class="footer-bottom"><span>© 2026 Trill Root contributors</span><span>Independent project · Not affiliated with Google, Samsung, Magisk, KernelSU, or KingRoot.</span></div>
+  </footer>
+</body>
+</html>
