@@ -1,0 +1,47 @@
+name: Android preview
+
+on:
+  push:
+    branches: ['arena/de8b10cf-trillroot', main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install pinned SDK components
+        run: sdkmanager "platforms;android-36" "build-tools;36.1.0"
+
+      - name: Test, build, sign preview, and verify package
+        run: python3 tools/build_apk.py --java-home "$JAVA_HOME" --sdk "$ANDROID_HOME"
+
+      - name: Verify Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v4
+
+      - name: Upload debug preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: TrillRoot-debug-preview
+          path: |
+            artifacts/TrillRoot-*-debug.apk
+            artifacts/*.sha256
+            artifacts/*-verification.txt
+          if-no-files-found: error
+          retention-days: 14

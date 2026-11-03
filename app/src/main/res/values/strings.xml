@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Trill Root</string>
+    <string name="overview">Overview</string>
+    <string name="routes">Routes</string>
+    <string name="checklist">Checklist</string>
+    <string name="about">About</string>
+</resources>
